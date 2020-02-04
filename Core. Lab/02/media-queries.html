@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  <style>
+    html,body{
+      height: 100%;
+      margin:0%;
+    }
+    body{
+      display:flex;
+      flex-direction:row;
+    }
+    div{
+      flex:1;
+    }
+    div:nth-of-type(even) {
+      background-color:sienna;
+    }
+    div:nth-of-type(odd) {
+      background-color:chocolate;
+    }
+
+    @media (max-width: 1000px) {
+
+    }
+
+    @media（max-width: 700px){
+      /*more css goes here*/
+        /*if the abpve statement is true it will
+         apply these styles*/
+         body {
+           flex-direction:column;
+         }
+    }
+
+
+
+  @media (hover : none){
+    div:nth-of-type(even) {
+      background-color:fuchsia;
+    }
+
+
+    }
+    </style>
+  </head>
+  <body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+  </body>
+</html>
