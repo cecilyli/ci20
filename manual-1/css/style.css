@@ -5,7 +5,7 @@ html,body{
   }
 
 button {
-  background-color: transparent;
+  background-color:transparent;
   color: white;
   font-family: 'Questrial', sans-serif;
 }
@@ -251,7 +251,7 @@ margin:0 0 0 30px;
 
 .stepone{
 font-family: 'Exo', sans-serif;
-  display: none;
+
   width:90%;
   height: 100%;
 
@@ -264,7 +264,7 @@ font-family: 'Exo', sans-serif;
 .steptwo{
 font-family: 'Exo', sans-serif;
 font-weight:none;
-display: none;
+
 
 width:90%;
 height: 100%;
