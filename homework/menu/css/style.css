@@ -1,0 +1,158 @@
+html,body{
+  height: 100%;
+  margin:0%;
+  flex-direction: column-reverse;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  color: black;
+  font-family: 'Calistoga', cursive;
+}
+
+p.title{
+  font-size: 50px;
+}
+p.blue{
+  color: #336699;
+  font-size: 40px;
+}
+
+.column1{
+  align-items: center;
+  margin: 30px;
+  width: 45%;
+  height: 100%;
+  background: #f5f5f0;
+  border-radius: 50px;
+  float: left;
+
+}
+.column2{
+  margin: 30px;
+  width: 45%;
+  height: 100%;
+  float: left;
+  background: #c3c5d9;
+  border-radius: 50px;
+}
+.border{
+  margin: 30px;
+  width:90%;
+  height: 90%;
+  border-style: dotted;
+  border-color: yellow;
+  border-radius: 30px;
+}
+.border2{
+  margin: 30px;
+  width:90%;
+  height: 90%;
+  border-style: dotted;
+  border-color: #3385ff;
+    border-radius: 20px;
+}
+h2{
+text-align: center;
+font-family: 'Oleo Script', cursive;
+}
+
+h3{
+text-align: center;
+font-family: 'Oleo Script', cursive;
+}
+h5{
+  text-align: center;
+  font-family: 'Unna', serif;
+}
+
+p{text-align: center;
+ font-weight: lighter;
+  font-family: 'Oleo Script', cursive;
+}
+
+
+}
+
+@media (hover: none), (max-width: 800px) {
+
+body{
+  flex-direction: column;
+
+}
+.header{
+  padding: 70px;
+  float: none;
+
+}
+p.title{
+    font-size:40px;
+}
+p.blue{
+    font-size:30px;
+}
+.column1{
+  float: none;
+  width: 60%;
+  height: 100%;
+  padding: 5%;
+}
+
+.column2{
+
+  float: none;
+  width: 70%;
+  font-size:100px;
+    height: 90%;
+  padding: 5%;
+}
+p{
+  font-size: 20px;
+}
+h2{
+  font-size: 30px;
+}
+h5{
+font-size: 15px
+}
+
+}
+@media(hover: none), (max-width: 900px) {
+  body{
+    flex-direction: column;
+
+  }
+  .header{
+    padding: 10px;
+    float: none;
+  }
+  p.title{
+    font-size: 40px;
+  }
+  .column1{
+    float: left;
+    width: 80%;
+    height: 100%;
+    font-size:90%;
+    padding: 5%;
+  }
+
+  .column2{
+
+    float: left;
+    width:80%;
+    height: 100%;
+    font-size:90%;
+    padding: 5%;
+  }
+  p{
+    font-size: 15px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  h5{
+  font-size: 13px;
+  }
+}
