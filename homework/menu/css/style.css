@@ -130,7 +130,7 @@ font-size: 13px
 }
 
 }
-@media(hover: none), (max-width: 1000px) {
+@media(hover: none), (max-width: 1200px) {
   body{
     flex-direction: column;
 
@@ -144,7 +144,7 @@ font-size: 13px
   }
   .column1{
     float: left;
-    width: 80%;
+    width: 75%;
     height: 100%;
     font-size:90%;
     padding: 5%;
@@ -153,7 +153,7 @@ font-size: 13px
   .column2{
 
     float: left;
-    width:80%;
+    width:75%;
     height: 100%;
     font-size:90%;
     padding: 5%;
