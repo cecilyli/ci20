@@ -39,7 +39,6 @@ p.blue{
 }
 .border{
   margin: 30px;
-  width:90%;
   height: 90%;
   border-style: dotted;
   border-color: yellow;
@@ -47,11 +46,10 @@ p.blue{
 }
 .border2{
   margin: 30px;
-  width:90%;
   height: 90%;
   border-style: dotted;
   border-color: #3385ff;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 h2{
 text-align: center;
@@ -94,15 +92,14 @@ p.blue{
 }
 .column1{
   float: none;
-  width: 60%;
+  width: 50%;
   height: 100%;
   padding: 5%;
 }
 
 .column2{
-
   float: none;
-  width: 70%;
+  width: 50%;
   font-size:100px;
     height: 90%;
   padding: 5%;
@@ -114,11 +111,26 @@ h2{
   font-size: 30px;
 }
 h5{
-font-size: 15px
+font-size: 13px
+}
+
+.border{
+  margin: 10px;
+  height: 90%;
+  border-style: dotted;
+  border-color: yellow;
+  border-radius: 20px;
+}
+.border2{
+  margin: 10px;
+  height: 90%;
+  border-style: dotted;
+  border-color: #3385ff;
+    border-radius: 20px;
 }
 
 }
-@media(hover: none), (max-width: 900px) {
+@media(hover: none), (max-width: 1000px) {
   body{
     flex-direction: column;
 
