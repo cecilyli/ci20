@@ -35,8 +35,34 @@ console.log(fruits);
 fruits [3]="durian";
 
 //helpful tool for adding to an array
-fruits.push("coconut");
+fruits.push("coconut","papaya");
 
+console.log(fruits);
 
+//creat an empty array
+var array = [];
+
+//push will add this element TO THE END of the arrays
+
+array.push("hello");
+array.push(53);
+console.log(array);
+
+var innerArray = ["a","b","c"];
+
+array.push(innerArray);
+
+console.log(array);
+
+console.log(array[2][1])
+
+var complex = ["one",13,["prince","prints","prence"]];
+
+console.log(complex);
+
+var getTheInsideArray = complex[2];
+console.log(getTheInsideArray);
+console.log(getTheInsideArray[0]);
+console.log(complex[2][0]);
 
 </script>

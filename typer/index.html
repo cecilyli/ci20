@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Confetti Party</title>
+<style>
+
+body{
+	background-color: #0B346E;
+	height: 100%;
+    margin:0%;
+}
+
+svg {
+	position: absolute;
+}
+
+body div{
+	visibility: hidden;
+}
+
+body div.visible{
+	visibility: visible;
+}
+
+
+#step6{
+
+	 position: absolute;
+	 text-align: center;
+     display: block;
+     top: calc(50vh - 77px);
+}
+
+p{  
+	font-weight: bold;
+	-webkit-text-stroke: 2px white;
+	color: transparent;
+	font-size: 1200%;
+	font-family: Snell Roundhand; 
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #7B90D2, 0 0 40px #7B90D2, 0 0 50px #7B90D2, 0 0 60px #7B90D2, 0 0 70px #7B90D2;
+	
+ }
+
+/*
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #7B90D2, 0 0 40px #7B90D2, 0 0 50px #7B90D2, 0 0 60px #7B90D2, 0 0 70px #7B90D2;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #7B90D2, 0 0 40px #7B90D2, 0 0 50px #7B90D2, 0 0 60px #7B90D2, 0 0 70px #7B90D2, 0 0 80px #7B90D2;
+  }
+}*/
+
+
+
+
+#step0{
+     
+     position: relative;
+	 text-align: center;
+     display: block;
+     top: calc(50vh - 77px);
+}
+
+body div:not(#step0) {
+	/*top: 20px;*/
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+    
+	<div id="step0" class="visible">
+		<img src="image/start.png" width=400px height=150px >
+	</div>
+	<div id="step1" >
+		<img src="image/step1.png" width=400px height=140px >
+	</div>
+	<div id="step2" >
+		<img src="image/step2.png" width=400px height=165px >
+	</div>
+	<div id="step3" >
+		<img src="image/step3.png" width=400px height=165px >
+	</div>
+	<div id="step4" >
+		<img src="image/step4.png" width=400px height=165px >
+	</div>
+	<div id="step5" >
+		<img src="image/step5.png" width=280px height=165px >
+	</div>
+	<div id="step6" >
+		<img src="image/step6.png" width=225px height=140px >
+	</div>
+	<div id="step7" >
+		<p>Confetti Party</p>
+	</div>
+
+
+
+  
+	
+    
+</body>
+
+	
+
+<script>
+
+// all svg shapes will be stored here
+var circleshapes = [];
+var squareshapes = [];
+var diamondshapes = [];
+var rhombusshapes = [];
+var lunarshapes = [];
+var starshapes = [];
+var octagonshapes = [];
+var heptagonshapes = [];
+var heartshapes = [];
+var thankyou = [];
+
+
+
+function makeCircle() {
+	var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("viewBox", "0 0 100 100");
+	svg.setAttribute("width", "50px");
+	svg.setAttribute("height", "50px");
+	var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+	circle.setAttribute("cx", 50);
+	circle.setAttribute("cy", 50);
+	circle.setAttribute("r", 50);
+	// change the color of the svg
+	svg.setAttribute("fill", "white");
+	// change the size of the svg
+	svg.style.top = Math.random() * window.innerHeight + "px";
+	svg.style.left = Math.random() * window.innerWidth + "px";
+	svg.appendChild(circle);
+	document.body.appendChild(svg);
+
+	circleshapes.push(svg); // store the svg shapes
+};
+
+function makeSquare() {
+   var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("viewBox", "0 0 144 144" );
+	svg.setAttribute("width", "45px");
+	svg.setAttribute("height", "45px");
+	var square = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+	square.setAttribute("class", "st0");
+	square.setAttribute("width", 144);
+	square.setAttribute("height", 144);
+	// change the color of the svg
+	svg.setAttribute("fill", "white");
+	// change the size of the svg
+
+	svg.style.top = Math.random() * window.innerHeight + "px";
+	svg.style.left = Math.random() * window.innerWidth + "px";
+	svg.appendChild(square);
+	document.body.appendChild(svg);
+
+	squareshapes.push(svg); // store the svg shapes
+};
+
+function makeDiamond() {
+   var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("viewBox", "0 0 144 144" );
+	svg.setAttribute("width", "50px");
+	svg.setAttribute("height", "50px");
+	var square = document.createElementNS("http://www.w3.org/2000/svg", "path");
+	square.setAttribute("d", "M 50 0 100 100 50 200 0 100 Z");
+	// change the color of the svg
+	svg.setAttribute("fill", "white");
+	// change the size of the svg
+	svg.style.top = Math.random() * window.innerHeight + "px";
+	svg.style.left = Math.random() * window.innerWidth + "px";
+	svg.appendChild(square);
+	document.body.appendChild(svg);
+
+	diamondshapes.push(svg); // store the svg shapes
+};
+
+function makeRhombus() {
+   var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("viewBox", "0 0 144 144" );
+	svg.setAttribute("width", "60px");
+	svg.setAttribute("height", "60px");
+	var square = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+	square.setAttribute("class", "st0");
+	square.setAttribute("points", "66.3,0.4 30.1,72.4 66,142.8 103.9,72.5");
+	// change the color of the svg
+	svg.setAttribute("fill", "white");
+	// change the size of the svg
+	svg.style.top = Math.random() * window.innerHeight + "px";
+	svg.style.left = Math.random() * window.innerWidth + "px";
+	svg.appendChild(square);
+	document.body.appendChild(svg);
+
+	rhombusshapes.push(svg); // store the svg shapes
+};
+
+function makeStar() {
+   var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("viewBox", "0 0 144 144" );
+	svg.setAttribute("width", "50px");
+	svg.setAttribute("height", "50px");
+	var square = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+
+	square.setAttribute("points", "114.6,137.6 72.4,115 29.9,136.9 38.4,89.9 4.4,56.2 51.8,49.7 73.3,7 94.1,50.1 141.4,57.3 106.9,90.4");
+	// change the color of the svg
+	svg.setAttribute("fill", "white");
+	// change the size of the svg
+	svg.style.top = Math.random() * window.innerHeight + "px";
+	svg.style.left = Math.random() * window.innerWidth + "px";
+	svg.appendChild(square);
+	document.body.appendChild(svg);
+
+	starshapes.push(svg); // store the svg shapes
+};
+
+function makeLunar() {
+   var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("viewBox", "0  0 144 144" );
+	svg.setAttribute("width", "90px");
+	svg.setAttribute("height", "50px");
+	var square = document.createElementNS("http://www.w3.org/2000/svg", "path");
+	
+	square.setAttribute("d", "M106,133.4c-6.2,2-12.9,3.1-19.8,3.1c-35.6,0-64.5-28.9-64.5-64.5c0-35.6,28.9-64.5,64.5-64.5c6.9,0,13.6,1.1,19.8,3.1C80,19,61.3,43.3,61.3,72C61.3,100.7,80,125,106,133.4z");
+  
+
+	// change the color of the svg
+	svg.setAttribute("fill", "white");
+	// change the size of the svg
+	svg.style.top = Math.random() * window.innerHeight + "px";
+	svg.style.left = Math.random() * window.innerWidth + "px";
+	svg.appendChild(square);
+	document.body.appendChild(svg);
+
+	lunarshapes.push(svg); // store the svg shapes
+};
+
+function makeOctagon() {
+   var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("viewBox", "0 0 144 144" );
+	svg.setAttribute("width", "50px");
+	svg.setAttribute("height", "50px");
+	var square = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+	square.setAttribute("points", "72,0 85.8,38.7 122.9,21.1 105.3,58.2 144,72 105.3,85.8 122.9,122.9 85.8,105.3 72,144 58.2,105.3 21.1,122.9 38.7,85.8 0,72 38.7,58.2 21.1,21.1 58.2,38.7");
+	// change the color of the svg
+	svg.setAttribute("fill", "white");
+	// change the size of the svg
+	svg.style.top = Math.random() * window.innerHeight + "px";
+	svg.style.left = Math.random() * window.innerWidth + "px";
+	svg.appendChild(square);
+	document.body.appendChild(svg);
+
+	octagonshapes.push(svg); // store the svg shapes
+};
+
+
+function makeHeptagon() {
+   var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("viewBox", "0 0 144 144" );
+	svg.setAttribute("width", "50px");
+	svg.setAttribute("height", "50px");
+	var square = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+	square.setAttribute("points", "73.8,11 24.6,34.6 12.4,87.9 46.5,130.5 101.1,130.5 135.1,87.9 123,34.6 ");
+	// change the color of the svg
+	svg.setAttribute("fill", "white");
+	// change the size of the svg
+	svg.style.top = Math.random() * window.innerHeight + "px";
+	svg.style.left = Math.random() * window.innerWidth + "px";
+	svg.appendChild(square);
+	document.body.appendChild(svg);
+
+	heptagonshapes.push(svg); // store the svg shapes
+};
+
+
+function makeHeart() {
+   var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("viewBox", "0 0 144 144" );
+	svg.setAttribute("width", "50px");
+	svg.setAttribute("height", "50px");
+	var square = document.createElementNS("http://www.w3.org/2000/svg", "path");
+	square.setAttribute("d", "M124.7,87.7l-56.4,53.1L15.2,84.4c-40.5-43,15.8-96.1,56.4-53.1C118.3-12.7,171.4,43.6,124.7,87.7z");
+	// change the color of the svg
+	svg.setAttribute("fill", "white");
+	// change the size of the svg
+	svg.style.top = Math.random() * window.innerHeight + "px";
+	svg.style.left = Math.random() * window.innerWidth + "px";
+	svg.appendChild(square);
+	document.body.appendChild(svg);
+
+	heartshapes.push(svg); // store the svg shapes
+};
+// each key triggers 1 of 3 things
+// create element, change color, change size
+// you need to hold onto each element after you create it. good for an array maybe.
+// the things inside the array are the SVG.
+// so you can pull an item out, get the SVG, and do something like 
+//   svg.setAttribute("fill", "purple");
+//
+
+function thankyoupng() {
+	console.log("hi");
+    var png = document.createElement("img");
+    png.src = "image/thankyou.png";
+    png.style.position = "absolute";
+	png.style.top = Math.random() * window.innerHeight + "px";
+	png.style.left = Math.random() * window.innerWidth + "px";
+	png.style.width = "200px";
+	// png.appendChild(png);
+	document.body.appendChild(png);
+	// thankyou.push(png); 
+
+	// store the svg shapes
+};
+
+
+
+function greatpng() {
+	console.log("hi");
+    var png = document.createElement("img");
+    png.src = "image/great.png";
+    png.style.position = "absolute";
+	png.style.top = Math.random() * window.innerHeight + "px";
+	png.style.left = Math.random() * window.innerWidth + "px";
+	png.style.width = "200px";
+	// png.appendChild(png);
+	document.body.appendChild(png);
+	// thankyou.push(png); 
+
+	// store the svg shapes
+};
+
+function hellopng() {
+	console.log("hi");
+    var png = document.createElement("img");
+    png.src = "image/hello.png";
+    png.style.position = "absolute";
+	png.style.top = Math.random() * window.innerHeight + "px";
+	png.style.left = Math.random() * window.innerWidth + "px";
+	png.style.width = "200px";
+	// png.appendChild(png);
+	document.body.appendChild(png);
+	// thankyou.push(png); 
+
+	// store the svg shapes
+};
+
+
+function havefunpng() {
+	console.log("hi");
+    var png = document.createElement("img");
+    png.src = "image/havefun.png";
+    png.style.position = "absolute";
+	png.style.top = Math.random() * window.innerHeight + "px";
+	png.style.left = Math.random() * window.innerWidth + "px";
+	png.style.width = "200px";
+	// png.appendChild(png);
+	document.body.appendChild(png);
+	// thankyou.push(png); 
+
+	// store the svg shapes
+};
+
+
+function holapng() {
+	console.log("hi");
+    var png = document.createElement("img");
+    png.src = "image/hola.png";
+    png.style.position = "absolute";
+	png.style.top = Math.random() * window.innerHeight + "px";
+	png.style.left = Math.random() * window.innerWidth + "px";
+	png.style.width = "200px";
+	// png.appendChild(png);
+	document.body.appendChild(png);
+	// thankyou.push(png); 
+
+	// store the svg shapes
+};
+
+
+function yearpng() {
+	console.log("hi");
+    var png = document.createElement("img");
+    png.src = "image/year.png";
+    png.style.position = "absolute";
+	png.style.top = Math.random() * window.innerHeight + "px";
+	png.style.left = Math.random() * window.innerWidth + "px";
+	png.style.width = "300px";
+	// png.appendChild(png);
+	document.body.appendChild(png);
+	// thankyou.push(png); 
+
+	// store the svg shapes
+};
+
+
+function cutepng() {
+	console.log("hi");
+    var png = document.createElement("img");
+    png.src = "image/cute.png";
+    png.style.position = "absolute";
+	png.style.top = Math.random() * window.innerHeight + "px";
+	png.style.left = Math.random() * window.innerWidth + "px";
+	png.style.width = "300px";
+	// png.appendChild(png);
+	document.body.appendChild(png);
+	// thankyou.push(png); 
+
+	// store the svg shapes
+};
+
+
+function sorrypng() {
+	console.log("hi");
+    var png = document.createElement("img");
+    png.src = "image/sorry.png";
+    png.style.position = "absolute";
+	png.style.top = Math.random() * window.innerHeight + "px";
+	png.style.left = Math.random() * window.innerWidth + "px";
+	png.style.width = "300px";
+	// png.appendChild(png);
+	document.body.appendChild(png);
+	// thankyou.push(png); 
+
+	// store the svg shapes
+};
+
+
+function makeawishpng() {
+	console.log("hi");
+    var png = document.createElement("img");
+    png.src = "image/makeawish.png";
+    png.style.position = "absolute";
+	png.style.top = Math.random() * window.innerHeight + "px";
+	png.style.left = Math.random() * window.innerWidth + "px";
+	png.style.width = "300px";
+	// png.appendChild(png);
+	document.body.appendChild(png);
+	// thankyou.push(png); 
+
+	// store the svg shapes
+};
+
+
+
+function iloveyoupng() {
+	console.log("hi");
+    var png = document.createElement("img");
+    png.src = "image/iloveyou.png";
+    png.style.position = "absolute";
+	png.style.top = Math.random() * window.innerHeight + "px";
+	png.style.left = Math.random() * window.innerWidth + "px";
+	png.style.width = "300px";
+	// png.appendChild(png);
+	document.body.appendChild(png);
+	// thankyou.push(png); 
+
+	// store the svg shapes
+};
+
+var firstKey = false;
+var colorindex = 0
+var index= 0
+var bgcolors =["#4E4F97","black","#C1328E" ,"#0B346E","#E83015", "#FFC408", ];
+
+var counter = 0;
+
+document.onkeypress = function(event) {
+	counter = counter + 1;
+
+	if (counter % 4 == 0) {
+		// every 3 key presses
+
+		console.log("three");
+
+		if (index < 8)  {
+	    	var instructionToHide = document.getElementById("step" + index);
+	    	instructionToHide.classList.remove("visible");
+	    	index++
+		}
+	    if (index !== 8) {
+			var instructionToShow = document.getElementById("step"+ index);
+			instructionToShow.classList.add("visible"); 
+	    }
+	    else{ 
+	       var stay = document.getElementById("step7");
+	       stay.classList.add("visible"); 
+	    }
+
+	   
+	
+	
+	}
+	
+
+   
+	var key = event.key.toLowerCase();
+	// check if this is the first key
+	if (firstKey == false) {
+
+		if ( key =="enter"){
+
+     	
+     	console.log(firstKey);
+     	document.body.style.backgroundColor = bgcolors[colorindex];
+        colorindex++
+        if (colorindex >= bgcolors.length){
+        	colorindex=0
+        }
+       }  
+		// first time press
+		
+		// document.querySelector("#title-div").style.top = "0px";
+		firstKey = true;
+		document.onkeyup = function () {
+			console.log("keyup")
+			firstKey = false
+		}
+
+		
+	}
+
+	// console.log(event);
+     
+
+     if (key == "1") {thankyoupng();}
+
+     if (key == "2") {greatpng();}
+
+	if (key == "3") {hellopng();}
+
+	if (key == "4") {havefunpng();}
+
+	if (key == "5") {holapng();}
+
+	if (key == "6") {cutepng();}
+
+	if (key == "7") {yearpng();}
+
+	if (key == "8") {sorrypng();}
+
+	if (key == "9") {makeawishpng();}
+
+	if (key == "0") {iloveyoupng();}
+
+
+
+	if (key == "q") {// set attribute, change the width and height
+		for (var i = 0; i < circleshapes.length; i = i + 1) {
+			circleshapes.setAttribute("width", "100px");
+            circleshapes.setAttribute("height", "100px");
+
+			
+		}
+	}
+	if (key == "w") {
+		for (var i = 0; i < squareshapes.length; i = i + 1) {
+			squareshapes[i].setAttribute("width", "100px")
+			squareshapes[i].setAttribute("height", "100px")
+
+      }
+	}
+	if (key == "e") {
+		for (var i = 0; i < diamondshapes.length; i = i + 1) {
+			diamondshapes[i].setAttribute("width", "80px")
+			diamondshapes[i].setAttribute("height", "80px")
+
+      }
+	}
+	if (key == "r") {
+		for (var i = 0; i < rhombusshapes.length; i = i + 1) {
+			rhombusshapes[i].setAttribute("width", "90px")
+			rhombusshapes[i].setAttribute("height", "90px")
+
+      }
+	}
+	if (key == "t") {
+		for (var i = 0; i < starshapes.length; i = i + 1) {
+			starshapes[i].setAttribute("width", "90px")
+			starshapes[i].setAttribute("height", "90px")
+
+      }
+	}
+	if (key == "y") {
+		for (var i = 0; i < lunarshapes.length; i = i + 1) {
+			lunarshapes[i].setAttribute("width", "80px")
+			lunarshapes[i].setAttribute("height", "150px")
+
+      }
+	}
+	if (key == "u") {
+		for (var i = 0; i < octagonshapes.length; i = i + 1) {
+			octagonshapes[i].setAttribute("width", "80px")
+			octagonshapes[i].setAttribute("height", "80px")
+
+      }
+	}
+	if (key == "i") {
+		for (var i = 0; i < heptagonshapes.length; i = i + 1) {
+			heptagonshapes[i].setAttribute("width", "150px")
+			heptagonshapes[i].setAttribute("height", "150px")
+
+      }
+	}
+	if (key == "o") {
+		for (var i = 0; i < heartshapes.length; i = i + 1) {
+			heartshapes[i].setAttribute("width", "90px")
+			heartshapes[i].setAttribute("height", "90px")
+
+      }
+	}
+	
+	
+
+	if (key == "a") { makeCircle(); }
+	if (key == "s") { makeSquare(); }
+	if (key == "d") { makeDiamond(); }
+	if (key == "f") { makeRhombus(); }
+	if (key == "g") { makeStar(); }
+	if (key == "h") { makeLunar(); }
+	if (key == "j") { makeOctagon(); }
+	if (key == "k") { makeHeptagon(); }
+	if (key == "l") { makeHeart(); }
+
+
+
+
+	if (key == "z") {
+      
+		// document.querySelector("#title-image").src = "image3.png";
+		for (var i = 0; i < circleshapes.length; i = i + 1) {
+			circleshapes[i].setAttribute("fill", "#E87A90")
+		}
+	}
+	if (key == "x") {
+		// get a shape out of the "shapes" array
+		for (var i = 0; i < squareshapes.length; i = i + 1) {
+			squareshapes[i].setAttribute("fill", "#F17C67")
+
+	}
+	}
+
+	if (key == "c") {
+		// get a shape out of the "shapes" array
+		for (var i = 0; i < diamondshapes.length; i = i + 1) {
+			diamondshapes[i].setAttribute("fill", "#A5DEE4")
+
+	}
+	}
+
+	if (key == "v") {
+		// get a shape out of the "shapes" array
+		for (var i = 0; i < rhombusshapes.length; i = i + 1) {
+			rhombusshapes[i].setAttribute("fill", "#986DB2")
+
+	}
+	}
+
+
+	if (key == "b") {
+		// get a shape out of the "shapes" array
+		for (var i = 0; i < starshapes.length; i = i + 1) {
+			starshapes[i].setAttribute("fill", "#F7D94C")
+
+	}
+	}
+
+
+	if (key == "n") {
+		// get a shape out of the "shapes" array
+		for (var i = 0; i < lunarshapes.length; i = i + 1) {
+			lunarshapes[i].setAttribute("fill", "#D7C4BB")
+
+	}
+	}
+
+
+	if (key == "m") {
+		// get a shape out of the "shapes" array
+		for (var i = 0; i < octagonshapes.length; i = i + 1) {
+			octagonshapes[i].setAttribute("fill", "#91B493")
+
+	}
+	}
+
+
+if (key == ",") {
+		// get a shape out of the "shapes" array
+		for (var i = 0; i < heptagonshapes.length; i = i + 1) {
+			heptagonshapes[i].setAttribute("fill", "#B28FCE")
+
+	}
+	}
+
+	if (key == ".") {
+		// get a shape out of the "shapes" array
+		for (var i = 0; i < heartshapes.length; i = i + 1) {
+			heartshapes[i].setAttribute("fill", "#C1328E")
+
+	}
+	}
+
+
+	
+	
+ 
+    
+  
+     
+
+    		
+    };
+
+</script>
+</body>
+</html>
