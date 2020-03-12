@@ -18,3 +18,5 @@ for (let i =0; i < pages.length; i++) {
   var link = `<a href =" " class="sidebar-link"> ${pages[i]}</a >`;
   sidebar.innerHTML += link; 
 }
+
+

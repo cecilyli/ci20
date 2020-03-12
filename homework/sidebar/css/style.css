@@ -2,10 +2,20 @@ body {
 display: flex;
 flex-direction: row;
 }
-.sidebar { flex: 0 0 150px; }
-.content { flex: 1; }
+
+.sidebar { 
+	flex: 0 0 150px;
+	background-color: pink; 
+    line-height: 6em;
+    padding-left: 1em;
+}
+.content { 
+	flex: 1;
+	background-color: ivory; 
+}
 
 div {
- border: 1px dotted red;
- padding: 10px;    
+ 
 }
+
+
