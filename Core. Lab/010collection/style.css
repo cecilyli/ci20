@@ -1,0 +1,12 @@
+body{
+	background:black;
+}
+
+.mirror{
+	filter:brightness(1000%);
+	transition: filter 1s;
+}
+
+.mirror.clicked{
+	filter:none;
+}

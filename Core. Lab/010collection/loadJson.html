@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+	.regular-container{
+		display: none;
+	}
+	.swiper-container{
+		display: none;
+	}
+	</style>
+<body>
+
+
+
+<script>
+
+// for fetch to work we need a server
+fetch("data.json")
+    .then(function(blob){ return blob.json();})
+    .then(function(json){ buildPage(json);});
+
+ function buildPage(data){
+ 	console.log(data);
+
+
+// instead of the for loop
+// for (var i = 0; i < data.length; i = i + 1) {
+data.forEach(function(entry, i){
+// data[i] is now called "entry"
+var img = document.createElement("img")
+img.src = entry.link;
+document.body.appendChild(img);
+img.onclick = function () {
+// make all the information will show up.
+document.createElement("p");
+p.innerHTML = entry.Description;
+document.body.appendChild(p);
+}
+});
+
+
+}
+
+</script>
+</body>
+</html>

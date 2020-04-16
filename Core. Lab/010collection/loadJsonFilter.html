@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+
+<script>
+
+fetch("data.json")
+    .then(function(blob){ return blob.json();})
+    .then(function(json){ buildPage(json);});
+
+ function buildPage(data){
+ 	console.log(data);
+ 	//for (var i =0; i< data.length; i = i + 1)
+ 		//console.log(data[i]);}
+ 	// filter is asking for a true or false
+ 	// for each item we generate a true or false
+ 	// "entry" is an object
+ 	// entry is each object inside the data
+
+ 	var filterdata = data.filter(function(entry){return entry.designer== "Troy Smith";});
+ 	console.log(filterdata);
+ 	//"data" is unaffected. the new array"break
+ }
+
+</script>
+</body>
+</html>

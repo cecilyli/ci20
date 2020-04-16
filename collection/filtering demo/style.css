@@ -1,0 +1,49 @@
+
+body {
+  font-size: 24px;
+}
+.items {
+  width: 100px;
+  height: 100px;
+  background: gray;
+  margin: 5px;
+  float:left;
+}
+
+
+.red {
+  background: red;
+}
+.yellow {
+  background: yellow;
+}
+.green {
+  background: green;
+}
+
+
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 0.25em;
+}
+
+
+.items {
+  width: 100px;
+  height: 100px;
+  background: gray;
+  margin: 5px;
+  float:left;
+  display: none;
+}
+
+
+.shown {
+  display: block;
+}
