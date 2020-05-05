@@ -1,0 +1,7 @@
+.article-image {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.article-image.visible {
+  opacity: 1;
